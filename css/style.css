@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Roboto:wght@100;300;400;500;700&display=swap');
+/*RESET CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    /* border: 1px solid blue; */
+}
+
+a , li {
+    display: inline-block;
+    font-style: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*======================================*/
+/*INDEX*/
+/*======================================*/
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    
+}
+#main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+/*======================================*/
+/*HEADER*/
+/*======================================*/
+
+/*PROPIEDADES DEL HEADER*/
+#header {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(3px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/*PROPIEDADES DEL NAV*/
+#navBar {
+    height: 100px;
+    display:flex;
+    justify-content: center ;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navBar img {
+    width: 150px;
+    
+    
+    
+}
+
+#navBar ul li a {
+    font-size: 25px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}
+
+#navBar ul {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;  
+}
+
+#navBar ul a:hover {
+    color: #8f8fff;
+    font-size: 25px;
+    transition: .5s;
+}
+#navBar ul a:active {
+    color: rgb(255, 149, 149);
+}
+
+/*======================================*/
+/*SECCION BANNER*/
+/*======================================*/
+#banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment:unset;
+}
+/*CONTENIDO*/
+#banner .banner__contenido {
+    position: relative;
+    top: 0;
+    width: 50%;
+    padding-left: 30px;
+    text-align: center;
+    margin: auto;
+}
+.banner__titulo , 
+.banner__parrafo , 
+.banner__boton {
+    margin-top: 60px;
+}
+
+/*CONTENIDO TITULO*/
+.banner__titulo h1 {
+    color: #dc3c3c;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+/*CONTENIDO BOTON*/
+.banner__boton {
+    width: 120px;
+    height: 40px;
+    background-color: #f03e3e;
+    border-radius: 10px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner__boton a {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+}
+
+.banner__boton:active {
+    background-color: rgb(255, 255, 255);
+}
+.banner__boton a:hover {
+    color: black;
+}
+
+/*======================================*/
+/*SECTION SERVICIOS*/
+/*======================================*/
+#productos {
+    background-color: #d9d9d9;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#productos .productosBox {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+#productos .productosBox article {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#productos h2 {
+    letter-spacing: 2px;
+}
+#productos img {
+    width: 55px;
+}
+
+/*======================================*/
+/*SECTION OFERTAS*/
+/*======================================*/
+#ofertas {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.ofertasBox {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+
+}
+#ofertas h2 {
+    letter-spacing: 2px;
+}
+
+/*CONTENIDO*/
+.oferta1,
+.oferta2,
+.oferta3 {
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    padding-bottom: 25px;
+}
+.oferta1 h3,
+.oferta2 h3,
+.oferta3 h3 {
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+.ofertasBox img {
+    width: 250px;
+    height: 350px;
+    border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 768px) {
+    .destinosBox {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+/*======================================*/
+/*PAGINA CONTACTO*/
+/*======================================*/
+
+
+form {
+    width: 100%;
+    height: auto;
+    background-color: blueviolet;
+}
+
+/*======================================*/
+/*PAGINA IMÁGENES*/
+/*======================================*/
+#containerGridBariloche {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    grid-template-areas: 
+    /*  COL1             COL2          COL3*/
+    "imgBariloche-1 imgBariloche-2 imgBariloche-4" /*FILA 1*/
+    "imgBariloche-3 imgBariloche-3 imgBariloche-4" /*FILA 2*/
+    ;
+    gap: 10px;
+}
+/*AREAS PARA LAS IMG BARILOCHE*/
+.imgBariloche-1 {
+    grid-area: imgBariloche-1;
+}
+.imgBariloche-2 {
+    grid-area: imgBariloche-2;
+}
+.imgBariloche-3 {
+    grid-area: imgBariloche-3;
+}
+.imgBariloche-4 {
+    grid-area: imgBariloche-4;
+}
+/*IMAGENES DE FONDO PARA BARILOCHE*/
+.imgBariloche-1,
+.imgBariloche-2 {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+}
+.imgBariloche-3 {
+    background-image: url(../images/imagenes/Calafate-peritoMoreno.jpg);
+    background-position: center;
+}
+.imgBariloche-4 {
+    background-image: url(../images/imagenes/bariloche.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*======================================*/
+/*PAGINA IMÁGENES: CALAFATE*/
+/*======================================*/
+#containerGridCalafate {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas: 
+        /*COL1         COL2        COL3         COL4*/
+    "ImgCalafate1 ImgCalafate2 ImgCalafate3 ImgCalafate4" /*FILA#1*/
+    "ImgCalafate5 ImgCalafate6 ImgCalafate7 ImgCalafate8" /*FILA#2*/
+    ;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.228);
+}
+
+.tamañoBox {
+    position: relative;
+}
+.tamañoBox h1 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+}
+.tamañoBox img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.ImgCalafate1 {
+    grid-area: ImgCalafate1;
+}
+.ImgCalafate2 {
+    grid-area: ImgCalafate2;
+}
+.ImgCalafate3 {
+    grid-area: ImgCalafate3;
+}
+.ImgCalafate4 {
+    grid-area: ImgCalafate4;
+}
+.ImgCalafate5 {
+    grid-area: ImgCalafate5;
+}
+.ImgCalafate6 {
+    grid-area: ImgCalafate6;
+}
+.ImgCalafate7 {
+    grid-area: ImgCalafate7;
+}
+.ImgCalafate8 {
+    grid-area: ImgCalafate8;
+}
+
+/*======================================*/
+/*PAGINA IMÁGENES: CALAFATE / MEDIA QUERIES*/
+/*======================================*/
+@media (max-width: 768px) {
+    #containerGridCalafate {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 200px);
+        grid-template-areas: 
+        /*COL1         COL2          */
+        "ImgCalafate1 ImgCalafate2" /*FILA#1*/
+        "ImgCalafate3 ImgCalafate4" /*FILA#2*/
+        "ImgCalafate5 ImgCalafate6" /*FILA#2*/
+        "ImgCalafate7 ImgCalafate8" /*FILA#2*/
+        ;
+    }
+}
+
+@media (max-width: 480px) {
+    #containerGridCalafate {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 160px);
+        grid-template-areas: 
+            /*COL1*/
+        "ImgCalafate1" /*FILA#1*/
+        "ImgCalafate2" /*FILA#2*/
+        "ImgCalafate3" /*FILA#3*/
+        "ImgCalafate4" /*FILA#4*/
+        "ImgCalafate5" /*FILA#5*/
+        "ImgCalafate6" /*FILA#6*/
+        "ImgCalafate7"  /*FILA#7*/
+        "ImgCalafate8" /*FILA#8*/
+        ;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tamañoBox img {
+        max-width: 80%;
+    }
+}
+
+
+
+
+/*======================================*/
+/*ESTILOS FOOTER*/
+/*======================================*/
+#footer {
+    margin-top: auto;
+    width: 100%;
+    height: auto;
+    background-color: #e6eefa;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
+}
+
+/*ARTICULO CONTENEDOR DE LOGO*/
+.footerLogo {
+    width: 140px;
+    height: 140px;
+}
+.footerLogo {
+    filter: drop-shadow(30px 10px 4px #4444dd);
+}
+
+/*ARTICULO CONTENEDOR DE LINKS*/
+.footer__links ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer__links ul li a {
+    color: black;
+    font-size: 20px;
+    margin-top: 7px;
+}
+
+/*ARTICULO CONTENEDOR DE REDES*/
+.footerRedes {
+    border: 1px dotted black;
+    border-radius: 100%;
+    padding: 4px;
+    width: 50px;
+    margin: 5px;
+}
+
+/*======================================*/
+/*ESTILOS FOOTER: SISTEMA RESPONSIVO*/
+/*======================================*/
+@media (max-width: 768px) {
+    
+    .footerLogo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footerRedes {
+        width: 40px;
+    }
+
+    .footer__links ul li a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer {
+        padding-top: 10px;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+}
