@@ -144,22 +144,22 @@ body {
 }
 
 /*======================================*/
-/*SECTION SERVICIOS*/
+/*productos destacados*/
 /*======================================*/
-#productos {
+#productosDestacados {
     background-color: #d9d9d9;
-    padding: 20px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
 }
-#productos .productosBox {
+#productosDestacados .productosDestacadosBox {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
 }
-#productos .productosBox article {
+#productosDestacados .productosDestacadosBox article {
     width: 200px;
     height: 200px;
     background-color: white;
@@ -171,15 +171,15 @@ body {
     gap: 20px;
 }
 
-#productos h2 {
+#productosDestacados h2 {
     letter-spacing: 2px;
 }
-#productos img {
-    width: 55px;
+#productosDestacados img {
+    width: 50px;
 }
 
 /*======================================*/
-/*SECTION OFERTAS*/
+/*TOP OFERTAS*/
 /*======================================*/
 #ofertas {
     padding: 20px 0;
@@ -189,7 +189,7 @@ body {
     text-align: center;
 }
 .ofertasBox {
-    margin-top: 30px;
+    margin-top: 0px;
     display: flex;
     justify-content: space-around;
 
@@ -236,158 +236,170 @@ body {
 form {
     width: 100%;
     height: auto;
-    background-color: blueviolet;
+    background-color: rgb(223, 223, 223);
 }
 
 /*======================================*/
 /*PAGINA IMÁGENES*/
 /*======================================*/
-#containerGridBariloche {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 300px);
-    grid-template-areas: 
-    /*  COL1             COL2          COL3*/
-    "imgBariloche-1 imgBariloche-2 imgBariloche-4" /*FILA 1*/
-    "imgBariloche-3 imgBariloche-3 imgBariloche-4" /*FILA 2*/
-    ;
-    gap: 10px;
-}
-/*AREAS PARA LAS IMG BARILOCHE*/
-.imgBariloche-1 {
-    grid-area: imgBariloche-1;
-}
-.imgBariloche-2 {
-    grid-area: imgBariloche-2;
-}
-.imgBariloche-3 {
-    grid-area: imgBariloche-3;
-}
-.imgBariloche-4 {
-    grid-area: imgBariloche-4;
-}
-/*IMAGENES DE FONDO PARA BARILOCHE*/
-.imgBariloche-1,
-.imgBariloche-2 {
-    background-image: url(../images/banner.jpg);
-    background-size: cover;
-}
-.imgBariloche-3 {
-    background-image: url(../images/imagenes/Calafate-peritoMoreno.jpg);
-    background-position: center;
-}
-.imgBariloche-4 {
-    background-image: url(../images/imagenes/bariloche.webp);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
 
 
-
-/*======================================*/
-/*PAGINA IMÁGENES: CALAFATE*/
-/*======================================*/
-#containerGridCalafate {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 200px);
-    grid-template-areas: 
-        /*COL1         COL2        COL3         COL4*/
-    "ImgCalafate1 ImgCalafate2 ImgCalafate3 ImgCalafate4" /*FILA#1*/
-    "ImgCalafate5 ImgCalafate6 ImgCalafate7 ImgCalafate8" /*FILA#2*/
-    ;
-    gap: 20px;
-    background-color: rgba(0, 0, 0, 0.228);
+/*PAGINA DE PRODUCTOS-ACERCA DE*/
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
-
-.tamañoBox {
-    position: relative;
-}
-.tamañoBox h1 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+.container .row {
+    display: flex;
     
 }
-.tamañoBox img {
+.container img{
+    width: 300px;
+    height: 270px;
+    padding: 20px;
+}
+
+/* Estilos de las categorías y productos */
+.category {
+    margin-bottom: 40px;
+}
+
+h3 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-top: 5%;
+    font-size: x-large;
+}
+
+.product {
+    margin-right: 20px; 
+    float: left; 
+}
+
+
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 767px) {
+    .product {
+        margin-bottom: 30px;
+        float: none; /* Para que los productos no floten en dispositivos móviles */
+        width: 100%; /* Ocupar el ancho completo en dispositivos móviles */
+    }
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 767px) {
+    .product {
+        margin-bottom: 30px;
+    }
+}
+
+/*===========================*/
+/*PAGINA DE INICIAR SESION*/
+/*===========================*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(rgb(207, 179, 207));
+    height: 100vh;
+}
+
+.inicioSesion{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, +50%);
+    width: 400px;
+    background-color: rgb(225, 225, 225);
+    border-radius: 10px;
+}
+
+.inicioSesion h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.inicioSesion{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .username {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.username input {
     width: 100%;
-    height: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
 }
 
-
-.ImgCalafate1 {
-    grid-area: ImgCalafate1;
-}
-.ImgCalafate2 {
-    grid-area: ImgCalafate2;
-}
-.ImgCalafate3 {
-    grid-area: ImgCalafate3;
-}
-.ImgCalafate4 {
-    grid-area: ImgCalafate4;
-}
-.ImgCalafate5 {
-    grid-area: ImgCalafate5;
-}
-.ImgCalafate6 {
-    grid-area: ImgCalafate6;
-}
-.ImgCalafate7 {
-    grid-area: ImgCalafate7;
-}
-.ImgCalafate8 {
-    grid-area: ImgCalafate8;
+.username label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
 }
 
-/*======================================*/
-/*PAGINA IMÁGENES: CALAFATE / MEDIA QUERIES*/
-/*======================================*/
-@media (max-width: 768px) {
-    #containerGridCalafate {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 200px);
-        grid-template-areas: 
-        /*COL1         COL2          */
-        "ImgCalafate1 ImgCalafate2" /*FILA#1*/
-        "ImgCalafate3 ImgCalafate4" /*FILA#2*/
-        "ImgCalafate5 ImgCalafate6" /*FILA#2*/
-        "ImgCalafate7 ImgCalafate8" /*FILA#2*/
-        ;
-    }
+.username span::before{
+    
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6c3483;
+    transition: .5s;
 }
 
-@media (max-width: 480px) {
-    #containerGridCalafate {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 160px);
-        grid-template-areas: 
-            /*COL1*/
-        "ImgCalafate1" /*FILA#1*/
-        "ImgCalafate2" /*FILA#2*/
-        "ImgCalafate3" /*FILA#3*/
-        "ImgCalafate4" /*FILA#4*/
-        "ImgCalafate5" /*FILA#5*/
-        "ImgCalafate6" /*FILA#6*/
-        "ImgCalafate7"  /*FILA#7*/
-        "ImgCalafate8" /*FILA#8*/
-        ;
-        justify-content: center;
-        text-align: center;
-    }
+.username input:focus ~ label,
+.username input:focus ~ label{
+    top:-5px;
+    color: #6c3483
+}
+.username input:focus ~ label,
+.username input:focus ~ label{
+    width: 100%;
 
-    .tamañoBox img {
-        max-width: 80%;
-    }
 }
 
-
-
-
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: blue;
+    cursor: pointer;
+}
+.recordar:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #6c3483;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor:pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: purple;
+    transition: .5s;
+}
 /*======================================*/
 /*ESTILOS FOOTER*/
 /*======================================*/
@@ -395,7 +407,7 @@ form {
     margin-top: auto;
     width: 100%;
     height: auto;
-    background-color: #e6eefa;
+    background-color: #4e4e4e;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -404,11 +416,8 @@ form {
 
 /*ARTICULO CONTENEDOR DE LOGO*/
 .footerLogo {
-    width: 140px;
-    height: 140px;
-}
-.footerLogo {
-    filter: drop-shadow(30px 10px 4px #4444dd);
+    width: 150px;
+    height: 100px;
 }
 
 /*ARTICULO CONTENEDOR DE LINKS*/
